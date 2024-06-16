@@ -96,9 +96,7 @@ example(foo) #shows an example of function
     plot(x,y) 
     title("My first scattersplot) 
     ```
-    
-    ![Screenshot 2023-02-20 at 12.56.34 PM.png](programming%20basics%204fd69b6eaf954353bd59e8077d474a69/Screenshot_2023-02-20_at_12.56.34_PM.png)
-    
+  
 - solving for x in $Ax = b$
     
     ```r
