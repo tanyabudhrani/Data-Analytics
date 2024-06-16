@@ -24,45 +24,6 @@ lines(x,y, type="b", pch=19, col="red")
 legend("topleft", c("N(0,1)", "N(1,0.64)"), fill=c("blue", "red"))
 ```
 
-![Rplot01.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot01.png)
-
-## iris data set
-
-- `str(iris)`
-    
-    ![Screenshot 2023-02-27 at 1.18.27 PM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-27_at_1.18.27_PM.png)
-    
-- `head(iris)`
-    
-    ![Screenshot 2023-02-27 at 1.18.35 PM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-27_at_1.18.35_PM.png)
-    
-- `plot(iris)`
-    
-    ![Screenshot 2023-02-27 at 1.19.40 PM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-27_at_1.19.40_PM.png)
-    
-
-- `plot(iris$Species)`
-    
-    ![Screenshot 2023-02-27 at 1.20.56 PM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-27_at_1.20.56_PM.png)
-    
-- `plot(iris$Petal.length)`
-    
-    ![Rplot01.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot01%201.png)
-    
-- `plot(iris$Species, iris$Petal.LLenength)`
-    
-    ![Rplot.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot.png)
-    
-
-```r
-plot(iris$Petal.Length, iris$Petal.Width, 
-	col = iris$Species, #colour according to species
-	pch = 16, #using solid circles 
-	main = "Iris: Petal Length vs. Petal Width", xlab = "Petal Length", ylab = "Petal Width") 
-```
-
-![Rplot02.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot02.png)
-
 # ggplot2
 
 - the r package extends the basic charting and graphing functions
@@ -85,8 +46,6 @@ ggplot(data = <DATA>) + <GEOM_FUNCTION>(mapping=aes(<MAPPINGS>)
 ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy, color=class))
 ```
 
-![Rplot.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot%201.png)
-
 > explanation of code: **`geom_point(mapping = aes(x = displ, y = hwy))`** adds a layer to the plot using the **`geom_point()`** function, which creates a scatterplot of points— the **`mapping`** argument specifies how the variables in the data frame should be mapped to the aesthetics (visual properties) of the plot (in this case, it uses the **`aes()`** function to map the **`displ`** variable to the x-axis and the **`hwy`** variable to the y-axis
 > 
 
@@ -95,14 +54,10 @@ ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy, size=class))
 #bases the size on the class
 ```
 
-![Rplot.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot%202.png)
-
 ```r
 ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy, shape=class))
 #bases the size on the shape
 ```
-
-![Rplot01.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot01%202.png)
 
 ## facets
 
@@ -112,13 +67,9 @@ ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy, shape=class))
 ggplot(data=mpg), + geom_point(mappings=aes(x=displ, y=hwy)) + facet_wrap(~class, nrow=3)
 ```
 
-![Rplot02.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot02%201.png)
-
 ```r
 ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy)) + facet_grid(drv~cyl)
 ```
-
-![Rplot03.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot03.png)
 
 > **`facet_wrap()`** creates a grid of plots, where each plot is a subset of the data based on a single categorical variable— the plots are arranged in a "wrap" fashion, meaning that the plots are arranged in a single row or column and wrap around to a new row or column when the maximum number of plots per row or column is reached
 > 
@@ -134,13 +85,9 @@ ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy)) + facet_grid(drv~cyl)
 ggplot(data=mpg) + geom_point(mapping=aes(x=displ, y=hwy) #left
 ```
 
-![Rplot.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot%203.png)
-
 ```r
 ggplot(data=mpg) + geom_smooth(mapping=aes(x=displ, y=hwy))
 ```
-
-![Rplot.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot%204.png)
 
 - a geom is the geometrical object that a plot uses to represent data
     - bar charts use **bar geoms**, line charts use **line geoms,** box plots use **box plot geoms**
@@ -161,8 +108,6 @@ geom_smooth(mapping = aes(x = displ, y = hwy, color = drv), show.legend = FALSE)
 #he show.legend argument is set to FALSE, which means that the legend for the color grouping variable will not be shown in the plot
 ```
 
-![Screenshot 2023-03-12 at 4.20.21 PM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-03-12_at_4.20.21_PM.png)
-
 - multiple geom functions can also be added to ggplot to display in the same plot
 
 ```r
@@ -170,8 +115,6 @@ ggplot(data = mpg) +
 geom_point(mapping = aes(x = displ, y = hwy)) + #geom_point creates a scatterplot
 geom_smooth(mapping = aes(x = displ, y = hwy)) #gexaom_smooth creates a line 
 ```
-
-![Rplot01.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot01%203.png)
 
 ## statistical transformations
 
@@ -188,8 +131,6 @@ geom_bar(mapping = aes(x = cut, y = after_stat(prop), group = 1))
 #this argument is necessary because the y aesthetic is computed using a summary statistic, so each bar has its own unique value of y
 ```
 
-![Rplot.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot%205.png)
-
 ## position adjustment
 
 - the stacking is performed automatically by the position adjustment specified by the position argument
@@ -198,8 +139,6 @@ geom_bar(mapping = aes(x = cut, y = after_stat(prop), group = 1))
 ggplot(data = diamonds) +
 geom_bar(mapping = aes(x = cut, fill = clarity))
 ```
-
-![Rplot01.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Rplot01%204.png)
 
 - position = “identity” will place each object exactly where it falls in the context of the graph
     - the **`position`** argument is set to **`"identity"`**, which means that the heights of the bars represent the actual values of the data, rather than some summary statistic like counts or proportions
@@ -246,9 +185,6 @@ bar + coord_polar() #uses polar coordinates
     
 
 ### final template
-
-![Screenshot 2023-02-27 at 2.25.36 PM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-27_at_2.25.36_PM.png)
-
 - barplots, histograms, scatterplots
     
     # barplot
@@ -267,8 +203,6 @@ bar + coord_polar() #uses polar coordinates
     chart+bars
     ```
     
-    ![Screenshot 2023-02-24 at 8.02.13 AM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-24_at_8.02.13_AM.png)
-    
     - `ggtitle: chart title; xlab, ylab: label for x-axis/y-axis`
         - xlabel ← xlab(”student’s gender”)
         - ylabel ← ylab(”frequency”)
@@ -282,8 +216,6 @@ bar + coord_polar() #uses polar coordinates
     
     # identity makes the heights of the bars to represent the values in the data
     ```
-    
-    ![Screenshot 2023-02-24 at 8.15.28 AM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-24_at_8.15.28_AM.png)
     
     - what if we want to color the bars depending on a certain feature?
     
@@ -315,8 +247,6 @@ bar + coord_polar() #uses polar coordinates
     ggplot(record, aes(x=quiz)) + geom_histogram(binwidth=20, fill="pink", color="black")
     ```
     
-    ![Screenshot 2023-02-24 at 8.21.55 AM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-24_at_8.21.55_AM.png)
-    
     # scatterplot
     
     - add the points using a `geom` layer called `geom_point` with the ‘+’ operator
@@ -325,5 +255,3 @@ bar + coord_polar() #uses polar coordinates
     scatter <- ggplot(record, aes(x=quiz, y=exam, color=gender, shape=gender)) 
     + geom_point(size=3) + xlab("Quiz") + ylab("Exam") + ggtitle("Exam vs. Quiz marks")
     ```
-    
-    ![Screenshot 2023-02-24 at 8.43.34 AM.png](programming%20and%20statistics%206c521e0b6aa64029be93962395d55b35/Screenshot_2023-02-24_at_8.43.34_AM.png)
