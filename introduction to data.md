@@ -33,12 +33,6 @@ type: lecture
         - **overall mean:** (2+3+3.5)/8 = 2.83 = B
 - letter grade mapping system is may not be fair since all three students had higher letter grades than their numerical counterparts
 
-### types of analytics in business
-
-![Screenshot 2023-01-09 at 10.43.16 AM.png](introduction%20to%20data%208c0bf7631e7b49c496cd54f8dca14a6a/Screenshot_2023-01-09_at_10.43.16_AM.png)
-
-[Untitled Database](introduction%20to%20data%208c0bf7631e7b49c496cd54f8dca14a6a/Untitled%20Database%20e458bd6eb0f64324b647843ea7f89a1a.csv)
-
 ### why is data science so successful?
 
 - **better models**
@@ -93,9 +87,6 @@ type: lecture
     - **unexpected**— non-obvious to the system
     - **understandable**— humans should be able to interpret the pattern
 
-[Untitled Database](introduction%20to%20data%208c0bf7631e7b49c496cd54f8dca14a6a/Untitled%20Database%20780769e2e44e4b31afa0e105d372b46d.csv)
-
-### relation between data mining and analytics
 
 - analytics include both **data analysis (mining)** and **communication (guide decision making)**
 - analytics is not so much concerned with individual analyses or analysis steps, but with the **entire methodology**
