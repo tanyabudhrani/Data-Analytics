@@ -60,8 +60,6 @@ BUT the chance that event E {$1, 3, 4$} will occur is $1+1+1/6 = 1/2 $ |
 
 - if E and F are events, then P(E|F) is the conditional probability of E, given F— P(E|F) = P(E,F)/P(F)
 
-![Screenshot 2023-01-16 at 9.57.41 AM.png](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/Screenshot_2023-01-16_at_9.57.41_AM.png)
-
 ### example one
 
 - suppose we draw a card from a shuffled set of 52 playing cards
@@ -93,8 +91,6 @@ BUT the chance that event E {$1, 3, 4$} will occur is $1+1+1/6 = 1/2 $ |
 
 - an insurance company holds the following data concerning the probability of an insurance claim— for people under 30, the probability is 0.04 and for people over 30, the probability is 0.02— if it is known that 30% of the targeted population is under 30, what is the probability of an insurance claim for a randomly chosen person?
 
-![IMG_9303.heic](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/IMG_9303.heic)
-
 ## bayes’ formula
 
 - sometimes, we need a formula that inverts conditions (e.g. predicts an event conditioned on some observations)
@@ -104,8 +100,6 @@ BUT the chance that event E {$1, 3, 4$} will occur is $1+1+1/6 = 1/2 $ |
 
 - suppose 1 in 1,000 persons has a certain disease
 - for 99% of the diseased persons, a test will yield positive results | for 5% of the healthy persons, a test will also yield a positive result— what is the probability of a positive test?
-
-![IMG_9305.heic](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/IMG_9305.heic)
 
 ## independent events
 
@@ -141,35 +135,19 @@ BUT the chance that event E {$1, 3, 4$} will occur is $1+1+1/6 = 1/2 $ |
 
 - **argmax**: the arguments of the maximum (e.g. find the optimal value of c which maximizes P(c|d))
 
-[Untitled Database](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/Untitled%20Database%201ea72b63b008409e97d4e59a29c27d47.csv)
-
 ## multinomial bayes
 
 - **bag of words assumption**: assume position doesn’t matter
 - **conditional independence**: assume the feature probabilities $P(x_i|c_j)$ are independent given the class $c$— $P(x_1, … x_n | c) = P(x_1 | c)P(x_2 | c)P(x_3 | c)$
-    
-    ![Screenshot 2023-01-16 at 1.20.24 PM.png](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/Screenshot_2023-01-16_at_1.20.24_PM.png)
-    
+  
 
 ### applying multinomial naive bayes to text classification
 
 - position ← all word positions in the test document
-    
-    ![Screenshot 2023-01-16 at 1.20.15 PM.png](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/Screenshot_2023-01-16_at_1.20.15_PM.png)
-    
 - however, multiplying lots of probabilities can result in floating-point underflow— luckily, log(ab) = log(a) + log(b), so we can sum logs of probabilities instead of multiplying them
 
 ### log space
 
-- **using this**:
-    
-    ![Screenshot 2023-01-16 at 1.23.50 PM.png](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/Screenshot_2023-01-16_at_1.23.50_PM.png)
-    
-
-- **instead of this**:
-    
-    ![Screenshot 2023-01-16 at 1.24.36 PM.png](probability%20basic%2077055c4f4f134d34883b87fc8cb86399/Screenshot_2023-01-16_at_1.24.36_PM.png)
-    
 - the parameters (e.g. ($cj$) and ($x_i|c_j$)) will be estimated from the data
 - we can do this since **log doesn’t change the ranking of the classes** (class with the highest probability still has the highest log problem)— the model is now just the max of the sum of the weights (a **linear function** of the inputs) which is why **naive bayes is a linear classifier**
 
