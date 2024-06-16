@@ -21,8 +21,6 @@ type: lecture
     - harvest rain
     - winter rain
 
-![Screenshot 2023-03-24 at 8.37.24 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_8.37.24_PM.png)
-
 # linear regression
 
 - suppose we have collected bivariate data ($x_i$, $y_1$), $i = 1,…,n$
@@ -32,15 +30,9 @@ type: lecture
 ## example one
 
 - cost of a first-class stamp in cents over time
-    
-    ![Screenshot 2023-03-24 at 8.41.58 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_8.41.58_PM.png)
-    
 - using the R function lm() we found the least squares fit for a line, which is $y = -0.06558 + 0.87574x$  where x is the number of years since 1960 and y is in cents
 - to predict the price for 2016 stamp, we let x = 56, then y = 48.98
     
-    ![Screenshot 2023-03-24 at 8.45.06 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_8.45.06_PM.png)
-    
-
 ## example two
 
 - suppose we have n pairs of fathers and adult sons
@@ -65,14 +57,10 @@ type: lecture
     - the method of least squares finds the values $ˆβ_0$ and 
     $ˆβ_1$ of $ß_0$ and $ß_1$ that minimizes $S(ß_0,ß_1)$, the sum of the squared errors
     
-    ![Screenshot 2023-03-24 at 9.00.09 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.00.09_PM.png)
-    
 - use least squares to fit a line to the following three data points: (0,1), (2,1), (3,4)
     - mean of x = 5/3 | mean of y = 2 | $s_x$$_x$ = 7/3 | $s$$_x$$_y$ = 2
         - $sxx = 1/n-1∑(x_i-x̄)^2$ | $sxy = 1/n-1∑(x_i-x̄)(y_i-ȳ)$
     - so, the least squares line as an equation is $y = 6/7x + 4/7$
-    
-    ![Screenshot 2023-03-24 at 9.08.38 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.08.38_PM.png)
     
 
 > **note**:
@@ -85,9 +73,6 @@ the word “linear” in linear regression does not refer to fitting a line, tho
     - $ß_1x + ß_0$ as the predicting or explaining $y_i$
     - the left-over term $e_i$ is called the residual
 - when plotting the residuals out, the data points should hover near the regression line— the residuals should look about the same across the range of x
-    
-    ![Screenshot 2023-03-24 at 9.12.39 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.12.39_PM.png)
-    
 
 ## homoscendasticity in fitting a line
 
@@ -124,31 +109,15 @@ the word “linear” in linear regression does not refer to fitting a line, tho
 
 ## why we analyze time-series?
 
-| compact description of data | • level: the average value in the series
-• trend: the increasing or decreasing value in the series
-• seasonality: the repeating short-term cycle in the series
-• noise: the random variation in the series |
+| compact description of data | • level: the average value in the series <br> • trend: the increasing or decreasing value in the series <br> • seasonality: the repeating short-term cycle in the series <br> • noise: the random variation in the series |
 | --- | --- |
-| interpretation | (e.g. seasonal adjustment)  |
-| forecasting | (e.g. predict unemployment)  |
+| interpretation | (e.g. seasonal adjustment) |
+| forecasting | (e.g. predict unemployment) |
 | control | (e.g. analyze impact of monetary policy on unemployment) |
-| hypothesis testing | (e.g. global warming)  |
-| simulation | (e.g. estimate probability of catastrophic events)  |
+| hypothesis testing | (e.g. global warming) |
+| simulation | (e.g. estimate probability of catastrophic events) |
+
 
 ### example
 
 - monthly number of unemployed people over years in australia
-
-![Screenshot 2023-03-24 at 9.30.27 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.30.27_PM.png)
-
-![Screenshot 2023-03-24 at 9.30.33 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.30.33_PM.png)
-
-![Screenshot 2023-03-24 at 9.30.39 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.30.39_PM.png)
-
-## time-series vs regression
-
-- monthly sales for a souvenir shop at a beach resort town in queensland
-
-![Screenshot 2023-03-24 at 9.32.14 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.32.14_PM.png)
-
-![Screenshot 2023-03-24 at 9.32.38 PM.png](linear%20regression%201e869f33308446c686f8b96f2542f0e4/Screenshot_2023-03-24_at_9.32.38_PM.png)
