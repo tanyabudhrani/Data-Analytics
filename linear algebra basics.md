@@ -5,9 +5,6 @@ type: lecture
 # vectors
 
 - an ordered list of numbers
-    
-    ![Screenshot 2023-01-29 at 6.58.21 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-29_at_6.58.21_PM.png)
-    
 - seen as a directed line segment in n-dimensions
     - **count of entries**: dimension
     - **vectors of dimension** n: n-vector
@@ -38,8 +35,6 @@ document
 
 - $n$-vectors $a$ and $b$ can be added/subtracted using the head-to-tail method
     
-    ![Screenshot 2023-01-29 at 7.02.53 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-29_at_7.02.53_PM.png)
-    
     > 0   1   1
     7 + 2 = 9
     3   0   3
@@ -55,25 +50,6 @@ document
 
 > word count vectors are used in computer based document analysis 
 
-each entry of the word count vector is the number of times the associated dictionary word appears in the document
-> 
-
-> word
-in 
-number
-house
-the
-document
-> 
-
-> 1   2   3
-1   1   2
-0 + 0 = 1
-0   0   0
-0   4   4
-1   1   2
-> 
-
 ## scalar-vector multiplication
 
 - scalar ß and $n$-vector $a$ can be multiplied
@@ -84,30 +60,9 @@ document
              6     -12
         > 
 
-![Screenshot 2023-02-08 at 1.21.25 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-02-08_at_1.21.25_PM.png)
-
 ### example
 
 > word count vectors are used in computer based document analysis — **WEIGHT 0.75**
-
-each entry of the word count vector is the number of times the associated dictionary word appears in the document — **WEIGHT 0.25**
-> 
-
-> word
-in 
-number
-house
-the
-document
-> 
-
-> 1         2   1.25
-       1         1   1
- (0.75)0 + (0.25)0 = 0.25
-       0         0   0
-       0         4   1
-       1         1   1
-> 
 
 ## inner product
 
@@ -126,40 +81,10 @@ document
 ### example
 
 > word count vectors are used in computer based document analysis 
-****
-each entry of the word count vector is the number of times the associated dictionary word appears in the document
-> 
-
-> word 0.1
-in 0.8
-number 0.2
-house 0.1
-the 0.9
-document 0.1
-> 
-
-> 1  
-1
-0 * (0.1 0.8 0.2 0.1 0.9 0.1) = 1
-0
-0
-1
-> 
-
-> 2
-1
-1 * (0.1 0.8 0.2 0.1 0.9 0.1) = 5
-0
-4
-1
-> 
 
 # norm
 
-- the euclidean norm of an n-vector x is:
-    
-    ![Screenshot 2023-01-29 at 7.23.25 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-29_at_7.23.25_PM.png)
-    
+- the euclidean norm of an n-vector x is: 
 - used to measure the length of a vector
 - properties (for any n-vectors x, y and scalar ß)
     - **homogeneity** $||ßx|| = |ß|||x||$
@@ -169,15 +94,9 @@ document 0.1
 
 # distance
 
-- the euclidean distance of two n-vectors x and y is:
-    
-    ![Screenshot 2023-01-30 at 8.28.30 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_8.28.30_PM.png)
-    
+- the euclidean distance of two n-vectors x and y is: 
 - length of the subtraction of the two vectors
-    
-    ![Screenshot 2023-01-30 at 8.29.26 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_8.29.26_PM.png)
-    
-
+   
 # angle
 
 - angle θ between two non-zero vectors a and b
@@ -196,13 +115,9 @@ document 0.1
 
 - 5 wikipedia articles (veterans day, memorial day, academy awards, golden globe awards, super bowl)
 
-![Screenshot 2023-01-30 at 8.31.02 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_8.31.02_PM.png)
-
 ### example - document dissimilarity
 
 - 5 wikipedia articles (veterans day, memorial day, academy awards, golden globe awards, super bowl)
-
-![Screenshot 2023-01-30 at 8.42.57 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_8.42.57_PM.png)
 
 # clustering
 
@@ -214,23 +129,6 @@ document 0.1
 ## k-means clustering
 
 - alternatively updating the group assignment, then the representatives— j[cluster] goes down in each step
-
-![Screenshot 2023-01-30 at 9.00.29 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.00.29_PM.png)
-
-- iterations
-    
-    ![Screenshot 2023-01-30 at 9.01.11 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.01.11_PM.png)
-    
-    ![Screenshot 2023-01-30 at 9.01.21 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.01.21_PM.png)
-    
-    ![Screenshot 2023-01-30 at 9.01.32 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.01.32_PM.png)
-    
-    ![Screenshot 2023-01-30 at 9.01.43 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.01.43_PM.png)
-    
-    ![Screenshot 2023-01-30 at 9.01.52 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.01.52_PM.png)
-    
-    ![Screenshot 2023-01-30 at 9.02.14 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.02.14_PM.png)
-    
 
 ### example — topic discovery
 
@@ -278,8 +176,6 @@ title of articles closest to the representatives
     > $A_i$$_,$$_1$ $A_i$$_,$$_2$ … $A_i$$_,$ $_n$
     > 
 
-![Screenshot 2023-01-30 at 9.32.50 PM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-30_at_9.32.50_PM.png)
-
 ## column and row representation
 
 - suppose A is an m*n matrix with entries $A_i$$_,$$_j$
@@ -295,7 +191,7 @@ can be expressed as block matrix with its (n-row vector) rows $b_1, b_2, … b_m
 
 - we are examining n sentences with a dictionary size of m words— how can you represent the count of each word in the sentence?
     - we define an $m*n$ matrix A
-    - $A_i$$_,$$_j$ denotes the count of the i-th word in the dictionary occurring in the j-th document
+    - $A_{i,j}$ denotes the count of the $i$-th word in the dictionary occurring in the $j$-th document
 
 > word
 in
@@ -323,9 +219,9 @@ document
 
 ## transposing matrices
 
-- the transpose of an $m*n$ matrix A is denoted as $A^T$, where $(A^T)_i$$_,$$_j = A_j$$_,$$_i$ for all possible i,j
-- transposing converts columns to row vectors (and vice versa)— $(A^T)^T=A$
-    
+- the transpose of an $m \times n$ matrix $A$ is denoted as $A^T$, where $(A^T)_{i,j} = A_{j,i}$ for all possible $i, j$
+- transposing converts columns to row vectors (and vice versa)— $(A^T)^T = A$
+
     > 0 4
     7 0 = 0 7 3
     3 1   4 0 1
@@ -334,10 +230,10 @@ document
 ## addition, subtraction, scalar multiplication
 
 - we can **add or subtract** matrices of the same size:
-    - $(A+B)_i$$_,$$_j = A_i$$_,$$_j + B_i$$_,$$_j$ for all i,j
-    - $(A-B)_i$$_,$$_j = A_i$$_,$$_j - B_i$$_,$$_j$ for all i,j
+    - $(A+B)_{i,j} = A_{i,j} + B_{i,j}$ for all $i, j$
+    - $(A-B)_{i,j} = A_{i,j} - B_{i,j}$ for all $i, j$
 - for **scalar multiplication**:
-    - $(aA)_i$$_,$$_j = aA_i$$_,$$_j$
+    - $(aA)_{i,j} = aA_{i,j}$
 
 ### **properties**:
 
@@ -347,10 +243,8 @@ document
 
 ## matrix-vector product
 
-- matrix-vector product of m*n matrix A and n-vector x, denoted as $y=Ax$, with
-    - $y_i=A_i$$_,$$_1x_1+…A_i$$_,$$_nx_n$
-
-![Screenshot 2023-01-31 at 6.02.47 AM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-31_at_6.02.47_AM.png)
+- matrix-vector product of $m \times n$ matrix $A$ and $n$-vector $x$, denoted as $y = Ax$, with
+    - $y_i = A_{i,1}x_1 + \dots + A_{i,n}x_n$
 
 ### example
 
@@ -367,13 +261,7 @@ the 0.9;0
 document 0.1;1
 > 
 
-![Screenshot 2023-01-31 at 6.05.14 AM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-31_at_6.05.14_AM.png)
-
-![Screenshot 2023-01-31 at 6.05.53 AM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-31_at_6.05.53_AM.png)
-
 ## matrix multiplication
 
 - we can multiply m*p matrix A and p*n matrix B
-    - C=AB where $C_i$$_,$$_j = ∑^P_1A_i$$_,$$_kB_k$$_,$$_j$ for any i,j— move along the i-th row of A and the j-th column of B
-
-![Screenshot 2023-01-31 at 6.05.53 AM.png](linear%20algebra%20basics%20f3447aa89e8241a1a993c59e51720239/Screenshot_2023-01-31_at_6.05.53_AM%201.png)
+   - $C = AB$ where $C_{i,j} = \sum_{k=1}^P A_{i,k}B_{k,j}$ for any $i, j$— move along the $i$-th row of $A$ and the $j$-th column of $B$
