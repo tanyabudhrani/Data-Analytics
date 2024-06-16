@@ -158,8 +158,6 @@ names(pm0) <- make.names(cnames[[1]])
 head(pm0[, 1:13]) 
 ```
 
-![Screenshot 2023-03-13 at 1.09.46 PM.png](data%20analytics%2079658b3ada174ec3a3ccfdd7c1a881e5/Screenshot_2023-03-13_at_1.09.46_PM.png)
-
 ### checking missing values
 
 ```r
@@ -198,8 +196,6 @@ mean(negative, na.rm=T)
 boxplot(log2(x0), log2(x1)) #extremely large
 ```
 
-![Rplot.png](data%20analytics%2079658b3ada174ec3a3ccfdd7c1a881e5/Rplot.png)
-
 ### an individual monitor
 
 ```r
@@ -231,8 +227,6 @@ cnt0 <- subset(pm0, State.Code == 36 & county.site %in% both)
 cnt1 <- subset(pm1, State.Code == 36 & county.site %in% both)
 ```
 
-![Screenshot 2023-03-13 at 1.43.02 PM.png](data%20analytics%2079658b3ada174ec3a3ccfdd7c1a881e5/Screenshot_2023-03-13_at_1.43.02_PM.png)
-
 ```r
 both.county <- 63
 both.id <- 2008 
@@ -250,10 +244,6 @@ x0sub <- pm0sub$Sample.Value
 rng <- range(x0sub, x1sub, na.rm = T)
 plot(dates0, x0sub, pch = 20, ylim = rng, xlab = "", ylab = expression(PM[2.5]*" ("*mu*g/m^3*")"))s
 ```
-
-![Rplot.png](data%20analytics%2079658b3ada174ec3a3ccfdd7c1a881e5/Rplot%201.png)
-
-![Rplot.png](data%20analytics%2079658b3ada174ec3a3ccfdd7c1a881e5/Rplot%202.png)
 
 - **observation 1**: median levels of PM have decreased
 - **observation 2**: the variation spread in PM values in 2012 is much smaller than it was in 1999
