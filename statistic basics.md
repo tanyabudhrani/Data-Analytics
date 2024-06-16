@@ -30,9 +30,9 @@ type: lecture
 
 ## variance and standard dev
 
-- the variance of X is $Var(X) = E[(X-µ)^2]=∑_k(x_k-µ)^2p_x(x_k)$ which represents the **square distance from the mean** | variance can also be portrayed as $Var(x) = E[X^2]-µ^2$
-- standard deviation is simply $σ(X) = √Var(x)$ which represents the **weighted distance from the mean**
-    - **ex**: the variance of rolling a dice is $Var(x) = ∑^6$$_k$$_=$$_1$$[k^2*1/6] - µ^2 = 1/6*(6(6+1)(2*6+1))/6 - (7/2)^2 = 35/12$ — the standard deviation is $√35/12 = 1.70$
+- the variance of $X$ is $Var(X) = E[(X-\mu)^2] = \sum_k (x_k - \mu)^2 p_x(x_k)$ which represents the **square distance from the mean** | variance can also be portrayed as $Var(X) = E[X^2] - \mu^2$
+- standard deviation is simply $\sigma(X) = \sqrt{Var(X)}$ which represents the **weighted distance from the mean**
+    - **ex**: the variance of rolling a dice is $Var(X) = \sum_{k=1}^6 \left[ \frac{k^2}{6} \right] - \mu^2 = \frac{1}{6} \cdot \frac{6(6+1)(2 \cdot 6 + 1)}{6} - \left( \frac{7}{2} \right)^2 = \frac{35}{12}$ — the standard deviation is $\sqrt{\frac{35}{12}} = 1.70$
 
 ---
 
@@ -53,7 +53,7 @@ type: lecture
 ## important statistics
 
 - the **sample mean:** $x̄ = 1/n(X_1 + X_2 +… X_n)$
-- the **sample variance:** $S^2=1/n-1∑^n$$_k$$_=$$_1(X_k-x̄)^2$
+- the **sample variance:** $S^2 = \frac{1}{n-1} \sum_{k=1}^n (X_k - \bar{x})^2$
 - the **sample standard deviation:** $S = √sample variance$
 - the **sample median:**
     - the middle value of the **order statistic** (if [1] the observations are arranged in increasing order and [2] if n is odd)
@@ -77,7 +77,7 @@ $0.083+0.066/2 = -0.0085$ |
 
 - expected value of $µ_x̄ = E[x̄] = E[1/n(X_1+X_2+…X_n)] = µ$
 
-- variance of **$σ^2$$^/$$^x = Var(x̄) = σ^2/n → n → +∞$** and **$σ^2$$^/$$^x$ $→ 0$**
+- variance of **$\sigma^2_x = Var(\bar{x}) = \frac{\sigma^2}{n} \rightarrow n \rightarrow +\infty$** and **$\sigma^2_x \rightarrow 0$**
 
 > the expected value of the sample mean is the population mean
 > 
@@ -112,9 +112,6 @@ $0.083+0.066/2 = -0.0085$ |
 ## general normal
 
 - $P(x≤X≤x+△x)/△x$ ****where $△x$ is very small ****
-    
-    ![Screenshot 2023-01-21 at 9.36.56 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_9.36.56_AM.png)
-    
 
 ## standard normal
 
@@ -128,9 +125,6 @@ $0.083+0.066/2 = -0.0085$ |
 - when $µ = 0$ and $σ = 1$:
     - $f(x) = 1/(√2π)e^-$$^1$$^/$$^2$$^x$$^2$ where X is **standard normal** or $X$~$N(0,1)$ because
         
-        ![Screenshot 2023-01-21 at 9.43.04 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_9.43.04_AM.png)
-        
-    
 
 | $z$ | $Φ(z)$ | $z$ | $Φ(z)$ |
 | --- | --- | --- | --- |
@@ -155,9 +149,6 @@ $0.083+0.066/2 = -0.0085$ |
 # confidence interval estimate
 
 - $x̄-µ/σ/√n$ is approximately standard normal for very large n— the confidence interval estimate of µ is:
-    
-    ![Screenshot 2023-01-21 at 9.54.16 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_9.54.16_AM.png)
-    
 
 ### example
 
@@ -176,24 +167,6 @@ $0.083+0.066/2 = -0.0085$ |
     1. gather data (samples)
     2. we hypothesize that a random variable has a given meaning
     3. we decide to accept or reject the hypothesis based on the data we collect
-
-- example one
-    
-    ![Screenshot 2023-01-21 at 10.06.46 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.06.46_AM.png)
-    
-    ![Screenshot 2023-01-21 at 10.06.57 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.06.57_AM.png)
-    
-    ![Screenshot 2023-01-21 at 10.07.25 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.07.25_AM.png)
-    
-    ![Screenshot 2023-01-21 at 10.07.38 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.07.38_AM.png)
-    
-
-- example two
-    
-    ![Screenshot 2023-01-21 at 10.08.05 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.08.05_AM.png)
-    
-    ![Screenshot 2023-01-21 at 10.08.10 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.08.10_AM.png)
-    
 
 ---
 
@@ -220,11 +193,6 @@ $0.083+0.066/2 = -0.0085$ |
 - **unsupervised**
     - clustering, factor analysis, latent topic modeling, auto-encoders
     
-
-![Screenshot 2023-01-21 at 10.14.22 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.14.22_AM.png)
-
-![Screenshot 2023-01-21 at 10.14.58 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.14.58_AM.png)
-
 > note that, unsupervised learning is **often used inside** a larger supervised learning problem
 > 
 
@@ -234,33 +202,19 @@ $0.083+0.066/2 = -0.0085$ |
 
 - first attempt— maximum likelihood estimates using the **frequencies** in the data
     
-    ![Screenshot 2023-01-21 at 10.19.41 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.19.41_AM.png)
-    
-
 ## parameter estimation
-
-![Screenshot 2023-01-21 at 10.19.56 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.19.56_AM.png)
 
 - creating a mega-document for class j by concatenating all documents with the class label and using frequency of w in said document
 
 ## problem with maximum likelihood
 
 - what if we have seen no training documents with the word fantastic and classified in the topic positive (thumbs-up)?
-    
-    ![Screenshot 2023-01-21 at 10.21.03 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.21.03_AM.png)
-    
 - zero probabilities cannot be conditioned away, no matter the lack of evidence!
     
-    ![Screenshot 2023-01-21 at 10.21.23 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.21.23_AM.png)
-    
-
 # laplace (add-1)
 
 - smoothing for naive bayes
-    
-    ![Screenshot 2023-01-21 at 10.21.45 AM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-21_at_10.21.45_AM.png)
-    
-
+  
 ## unknown words
 
 - we **ignore** unknown words that appear in our test data but not our training data/vocab— building an unknown word model just would not help
@@ -310,8 +264,6 @@ the most fun film of the summer |
     - $P(+)P(S|+) = 2/5(1*1*2/29^3)=3.2*10^-$$^5$
 
 ## estimating n-gram probabilities
-
-![Screenshot 2023-01-30 at 2.38.49 PM.png](statistic%20basics%201692219d83404b41b824edaa6ad193e0/Screenshot_2023-01-30_at_2.38.49_PM.png)
 
 > A. <s> I am Sam </s> 
 B. <s> Sam I am </s>
