@@ -119,8 +119,6 @@ print(pi)
     barplot(table(result)/runs) 
     ```
     
-    ![Screenshot 2023-03-17 at 7.06.48 PM.png](monte%20carlo%20simulation%209739cc430e6940fc8fbd98172a2f8fa1/Screenshot_2023-03-17_at_7.06.48_PM.png)
-    
 
 ## distributions
 
@@ -164,8 +162,6 @@ price <- cumprod(c(30, changes)) #30*1st random no * 2nd random no...
 #plot the line chart 
 plot(price, type="l") 
 ```
-
-![Screenshot 2023-03-17 at 7.13.50 PM.png](monte%20carlo%20simulation%209739cc430e6940fc8fbd98172a2f8fa1/Screenshot_2023-03-17_at_7.13.50_PM.png)
 
 # hits on a website
 
@@ -218,9 +214,6 @@ plot(price, type="l")
     hist(waitingTimeWebsite, breaks = 20)
     ```
     
-    ![Screenshot 2023-03-17 at 7.25.16 PM.png](monte%20carlo%20simulation%209739cc430e6940fc8fbd98172a2f8fa1/Screenshot_2023-03-17_at_7.25.16_PM.png)
-    
-
 # queueing system for atm
 
 | we will model a simple queueing system that represents customers arriving at and using an atm |
@@ -255,10 +248,6 @@ arrivalTime <- cumsum(rexp(100, 1))
 arrivalTime
 ```
 
-![Screenshot 2023-03-17 at 7.31.31 PM.png](monte%20carlo%20simulation%209739cc430e6940fc8fbd98172a2f8fa1/Screenshot_2023-03-17_at_7.31.31_PM.png)
-
-![Screenshot 2023-03-17 at 7.32.16 PM.png](monte%20carlo%20simulation%209739cc430e6940fc8fbd98172a2f8fa1/Screenshot_2023-03-17_at_7.32.16_PM.png)
-
 ```r
 set.seed(2) #ensures reproduction  
 serviceTime <- rnorm(100, mean = 0.9, sd = 0.25)
@@ -279,5 +268,3 @@ for(i in 1:100) {
 
 plot(waitTimeAll, xlab = "Customer ID", ylab = "Wait time")
 ```
-
-![Rplot01.png](monte%20carlo%20simulation%209739cc430e6940fc8fbd98172a2f8fa1/Rplot01.png)
