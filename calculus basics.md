@@ -23,16 +23,9 @@ type: lecture
     2. loss function: **$ℓ(ŷ,y_i) ∈ ℝ$**
         1. examples— mean-squared error, cross entropy 
 
-## secant and tangent line
-
-![Screenshot 2023-02-10 at 10.00.00 AM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_10.00.00_AM.png)
-
 # derivatives
 
 - the derivative of f(x) is the **slope of the tangent line** (instantaneous rate of change) at $(x, f(x))— dy/dx = f’(x)$
-    
-    ![Screenshot 2023-02-10 at 10.01.28 AM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_10.01.28_AM.png)
-    
 - the process of calculating the derivatives of a function is called **differentiation**
     - example— $y = x^2 = lim(2x+Δx) = 2x$ (also written as $dy = 2xdx$ or the differential $dy$ in terms of the differential $dx$)
 - used to estimate the output difference $Δy$ in terms of the small input difference $Δx$
@@ -41,12 +34,9 @@ type: lecture
 
 | rules  | formula  | example |
 | --- | --- | --- |
-| power rule  | $d(x^p)/dx = px^p$$^-$$^1$
-
-note— $dx/dx = 1$ (y = x has a slope of 1 everywhere)  | $d/dx (x^3) = 3x^3$$^-$$^1 = 3x^2$
-$d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
-| exponential rule  | $d(b^x)/dx = b^xlnb$ | $d/dx (e^x) = e^xlne$ ($lne = 1$) → $e^x$ |
-| logarithm rule  | $d(log_bx)/dx = 1/xlnb$ | $d/dx (lnx) = 1/x$ |
+| power rule  | $d(x^p)/dx = px^{p-1}$ <br> note— $dx/dx = 1$ (y = x has a slope of 1 everywhere)  | $d/dx (x^3) = 3x^{3-1} = 3x^2$ <br> $d/dx(1/2) = \frac{1}{2}x^{-1/2}$ |
+| exponential rule  | $d(b^x)/dx = b^x \ln b$ | $d/dx (e^x) = e^x \ln e$ ($\ln e = 1$) → $e^x$ |
+| logarithm rule  | $d(\log_b x)/dx = \frac{1}{x \ln b}$ | $d/dx (\ln x) = \frac{1}{x}$ |
 | derivatives for constants | $dC/dx = 0 $ | $d/dx(6) = 0$ |
 
 ### properties of derivatives
@@ -61,10 +51,7 @@ $d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
     | quotient rule | $[f(x)/g(x)]’ - f’(x)g(x) - f(x)g’(x)/[g(x)]^2 $ |
     | chain rule | $[f(g(x))]’ = f’(g(x))*g’(x)$ |
     - examples
-        
-        ![IMG-9832.jpg](calculus%20basics%2040e9bb75cca842429fbf08724396761a/IMG-9832.jpg)
-        
-
+       
 ## partial derivatives
 
 - a function may have multiple variables (e.g. $f(x,y) = x^2y$ and $g(x_1,x_2,x_3) = x_1x_2x_3$)
@@ -85,8 +72,6 @@ $d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
 > **a**: move w in the reverse direction from the slope of the function
 > 
 - the objective is to find the gradient of the loss function at the current point, and then moving in the opposite direction
-
-![Screenshot 2023-02-10 at 2.38.24 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_2.38.24_PM.png)
 
 ### training example
 
@@ -112,50 +97,35 @@ $d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
     - $x_j =$ “review contains ‘abysmal’”: **$θ_j = -10$**
     - $x_k =$ “review contains ‘mediocre;”: **$θ_k = -2$**
 
-# linear regression
-
-![Screenshot 2023-02-10 at 3.20.03 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_3.20.03_PM.png)
-
- 
 
 ## a probabilistic classifier?
 
 - $z = θ^T x$ is a number, and we want to use a function of z that goes from 0 to 1
-    
-    ![Screenshot 2023-02-10 at 3.25.36 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_3.25.36_PM.png)
-    
+
 - we need to formalize “sum is high” using a **principled classifier** that gives us a probability and can tell us:
     - $p(y = 1|x;θ)$
     - $p(y=0|x;θ)$
     - $y = s(z) = 1/1+e^-$$^z$
     
-    ![Screenshot 2023-02-10 at 3.27.07 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_3.27.07_PM.png)
-    
-
-### sigmoid function
-
-![Screenshot 2023-02-10 at 3.28.00 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_3.28.00_PM.png)
 
 # logistic regression
-
-![Screenshot 2023-02-10 at 3.29.06 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_3.29.06_PM.png)
 
 > the equation, for anyone confused, begins with the transposition of θ and x, where θ represents the weight vector and x represents the feature vector— the result of their product is a scalar value which is then passed through the sigmoid activation function σ to produce the final probability
 > 
 
 ## another recipe for machine learning
 
-1. given training data: ${x_i, y_i}^N$$_i$$_=$$_1$
+1. given training data: $\{(x_i, y_i)\}_{i=1}^N$
 2. choose each of these: 
-    1. **decision function** $(ŷ = fθ(x_i))$
+    1. **decision function** $(\hat{y} = f_\theta(x_i))$
         1. examples— linear regression, logistic regression, neural network
-    2. **loss function**: **$ℓ(ŷ,y_i) ∈ ℝ$**
+    2. **loss function**: **$\ell(\hat{y}, y_i) \in \mathbb{R}$**
         1. examples— mean-squared error, cross entropy 
-3. define goal: $θ*=argmin∑^N$$_i$$_=$$_1ℓ(f_θ(x_i),y_i)$
-    1. using argmin to calculate the values of θ that result in the lowest possible value of the total loss— where the optimal parameters of θ* are learned from the training data and used to make predictions for new, unseen data 
-4. train with SGD: $θ^($$^t$$^+$$^1$$^)=θ^t-n_t∇ℓ(f_θ(x_i),y_i)$
-    1. this is an update step— where $θ^t$ is the current value of the model’s parameters, $θ^t$$^+$$^1$ is the updated value of the model parameters, and $n_t$ is the learning rate or the size of the step 
-    2. the gradient of the loss function,  $∇ℓ(f_θ(x_i),y_i)$, gives the direction of the steepest descent with respect to the model’s parameters— the loss function measures the difference between the model’s prediction $f_θ(x_i)$ and the true label $y_i$ for $(x_i, y_i)$
+3. define goal: $\theta^* = \arg\min \sum_{i=1}^N \ell(f_\theta(x_i), y_i)$
+    1. using argmin to calculate the values of $\theta$ that result in the lowest possible value of the total loss— where the optimal parameters $\theta^*$ are learned from the training data and used to make predictions for new, unseen data 
+4. train with SGD: $\theta^{(t+1)} = \theta^t - \eta_t \nabla \ell(f_\theta(x_i), y_i)$
+    1. this is an update step— where $\theta^t$ is the current value of the model’s parameters, $\theta^{(t+1)}$ is the updated value of the model parameters, and $\eta_t$ is the learning rate or the size of the step 
+    2. the gradient of the loss function,  $\nabla \ell(f_\theta(x_i), y_i)$, gives the direction of the steepest descent with respect to the model’s parameters— the loss function measures the difference between the model’s prediction $f_\theta(x_i)$ and the true label $y_i$ for $(x_i, y_i)$
 
 ## backpropagation
 
@@ -167,17 +137,12 @@ $d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
 | weight update | after the gradients have been computed, the model parameters are updated using gradient descent by subtracting the gradient of the loss with respect to each weight and bias from their current value  |
 | repeat | the forward and backward passes are repeated multiple times until convergence, until a maximum number of iterations is reached |
 
-![Screenshot 2023-02-10 at 3.56.27 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_3.56.27_PM.png)
-
 ## areas under function graph
 
 - given y = f(x), nonnegative (f(x) ≥ 0) and continuous (with no breaks or jumps)— $F(x) = ∫^x_af(t)dt$ [antiderivative] the area under the graph of $f(x)$ in the interval $[a,x]$
     - $F(x+∆x) - F(x) =$ area under the graph of $f(x)$  in $[z,x+∆x] = f(x)*∆x$
     - when $∆x → 0$, $z→x$
-    - $f(x) = lim[∆x→0]$ $F(x+∆x)-F(x)/∆x = F’(x)$
-        
-        ![Screenshot 2023-02-10 at 4.06.09 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_4.06.09_PM.png)
-        
+    - $f(
 
 # integrals
 
@@ -189,8 +154,6 @@ $d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
 - **indefinite integrals**: ∫f(x)dx = F(x) + C [arbitrary constant]
     - $f(x) = 1/10x^1$$^0 + C$ is the general antiderivative of $f(x) = x^9$  OR $∫x^9dx = 1/10x^1$$^0+C$
     
-
-![Screenshot 2023-02-10 at 4.13.52 PM.png](calculus%20basics%2040e9bb75cca842429fbf08724396761a/Screenshot_2023-02-10_at_4.13.52_PM.png)
 
 ### properties of integrals
 
@@ -205,6 +168,4 @@ $d/dx(1/2) = 1/2x^-$$^1$$^/$$^2$ |
     if $p = -1$, $ln|u| + C$ |
     | exponential rule | $∫e^udu = e^u+C$ |
     | chain rule | $∫(x^5+2)^95x^4dx$… |
-    - examples
-        
-        ![IMG-9833.jpg](calculus%20basics%2040e9bb75cca842429fbf08724396761a/IMG-9833.jpg)
+   
